@@ -1,0 +1,87 @@
+h1,h3 {
+    background-color: rgb(26, 18, 107);
+    display : flex;
+    color : white;
+    justify-content: center;
+    width : 93vw;
+    align-items: center;
+    padding: 30px;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.timer-box {
+      margin-top: 15px;
+      background-color: #26a4b0;
+      border: 3px solid brown;
+      border-radius: 10px;
+      padding: 15px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      width: fit-content;
+}
+
+.board {
+    border: 2px solid red;
+    background-color:rgb(3 36 96);
+    height: 555px;
+    width: 93vw;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(6, 155px);
+    grid-gap: 28px;
+    justify-content: center;
+}
+
+.card {
+    height : 165px;
+    width : auto;
+    border : 2px solid red;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(138, 177, 202);
+    perspective: 1000px;
+}
+
+.card img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.container img {
+    top: 6px;
+    left: 1px;
+    width: 98%;
+    height: 91%;
+    position: absolute;
+    object-fit: cover;
+    backface-visibility: hidden;
+}
+
+.container img.logo {
+    z-index: 2;
+}
+
+.container img.icon {
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.container.flipped {
+  transform: rotateY(180deg);
+}
